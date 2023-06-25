@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ @layer components {
+    .list{
+        @apply  p-[8px] text-[#5a5a5a] font-[400] text-[16px] hover:text-[#0BB755] hover:font-[700] hover:scale-105 hover:transition-all duration-300 ease-in-out;
+    }
+ }
+
+
+.myphone{
+    box-shadow: 0px -1px 15px rgba(60, 189, 150, 0.15);
+        border-radius: 20px;
+}
+.boxs{
+    box-shadow: 0px 4px 4px rgba(60, 189, 150, 0.22);
+}
+.BG{
+    background-color: #506169;
+        background-image: linear-gradient(43deg, #506169 15%, #0bb755 47%, #0095aa 77%, #ffffff 100%);
+}
+.boxshadow{
+    box-shadow: 0px 5px 1px lightgreen;
+}
