@@ -54,7 +54,7 @@ function Footer() {
   return (
     <>
       <div className=" flex justify-between  flex-wrap mb-12 ">
-        <div className=" w-[33%] p-4 border-r-2 border-dashed  zero:w-full zero:border-none">
+        <div className=" w-[33%] p-4 border-r-2 border-dashed  zero:w-full zero:border-none mobile:w-full mobile:border-none">
           <div>
             <img src="/logo.png" alt="" className="mx-auto" />
           </div>
@@ -68,7 +68,7 @@ function Footer() {
           </p>
         </div>
 
-        <div className=" w-[33%]  p-12 space-y-3  border-r-2 border-dashed py-[100px] zero:border-none zero:w-full">
+        <div className=" w-[33%]  p-12 space-y-3  border-r-2 border-dashed py-[100px] mobile:py-[30px] zero:py-[30px] zero:border-none zero:w-full mobile:w-full mobile:border-none">
           <h1 className="font-bold text-2xl  ">Contact Us</h1>
           <h2 className="text-sm pt-4 ">
             {" "}
@@ -98,7 +98,7 @@ function Footer() {
             National Incubation Center Hyderabad
           </h2>
         </div>
-        <div className=" w-[33%] p-12 zero:w-full">
+        <div className=" w-[33%] p-12 zero:w-full mobile:w-full ">
           <h1 className="font-bold text-2xl">Subcribe</h1>
 
           <form onSubmit={handleSubmit}>
@@ -170,13 +170,25 @@ function Footer() {
           </h1>
         </div>
         <div className="flex space-x-2">
-          <TwitterIcon />
-          <FacebookIcon />
-          <InstagramIcon />
+          <TwitterIcon
+            sx={{
+              cursor: "pointer",
+            }}
+          />
+          <FacebookIcon
+            sx={{
+              cursor: "pointer",
+            }}
+          />
+          <InstagramIcon
+            sx={{
+              cursor: "pointer",
+            }}
+          />
           <img
             src="https://th.bing.com/th/id/OIP.IYfnL3tjRVop1JV6ML5LKAHaHa?w=204&h=204&c=7&r=0&o=5&dpr=1.5&pid=1.7"
             alt=""
-            className="w-5 h-5 rounded-full"
+            className="w-5 h-5 rounded-full cursor-pointer"
           />
         </div>
       </div>
@@ -188,6 +200,7 @@ function Footer() {
           className=" 
           absolute -left-20 bottom-0  zero:hidden mobile:hidden
           w-[560px] 
+          
       
       
       "

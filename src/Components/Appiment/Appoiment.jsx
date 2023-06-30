@@ -90,9 +90,9 @@ function Appoiment() {
       style={{
         backgroundColor: "#E3F9E7",
       }}
-      className=" w-full zero:pb-8 lcd:h-[85vh] mobile:h-[45vh] laptop:h-[40vh] my-16 rounded-3xl flex items-center justify-evenly flex-wrap zero:flex-col zero:space-y-4 zero:items-center zero:justify-center "
+      className=" w-full zero:pb-8 lcd:h-[85vh] mobile:h-full mobile:pb-8 laptop:h-[65vh] my-16 rounded-3xl flex items-center justify-evenly flex-wrap zero:flex-col zero:space-y-4 zero:items-center zero:justify-center "
     >
-      <div className="w-[50%] zero:w-full mx-auto">
+      <div className="w-[50%] zero:w-full mx-auto mobile:w-full">
         <h1 className=" font-bold text-3xl py-4 text-center ">
           Book an appointment
         </h1>
@@ -102,7 +102,7 @@ function Appoiment() {
           <img src="/User.png" alt="" className="h-[300px] mx-auto  " />
         </div>
       </div>
-      <div className="h-[434px] w-[38%] zero:w-[80%] mx-auto  rounded-2xl  bg-white boxs px-10 py-4 ">
+      <div className="h-[434px] w-[38%] zero:w-[80%] mobile:w-[80%] mx-auto  rounded-2xl  bg-white boxs px-10 py-4 ">
         <form onSubmit={handleSubmit}>
           <div className="flex items-center space-x-4 mb-2">
             <span className="bg-[#0BB755] p-2 rounded-lg">

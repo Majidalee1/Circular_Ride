@@ -1,54 +1,57 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { backsixe, loremTexts, normalize, rems } from "../../function";
 
 function FAQS() {
-  const [button1MarginRight, setButton1MarginRight] = useState("1rem");
-  const [button2MarginRight, setButton2MarginRight] = useState("1rem");
-  const [button3MarginRight, setButton3MarginRight] = useState("1rem");
+  const [button1MarginRight, setButton1MarginRight] = useState(rems);
+  const [button2MarginRight, setButton2MarginRight] = useState(rems);
+  const [button3MarginRight, setButton3MarginRight] = useState(rems);
+  const [loremText, setLoremText] = useState("");
+
+  useEffect(() => {
+    setLoremText(loremTexts[1]);
+    setButton1MarginRight(backsixe);
+
+    setButton2MarginRight(normalize);
+
+    setButton3MarginRight(normalize);
+  }, []);
 
   const handleButtonClick = (buttonNumber) => {
     if (buttonNumber === 1) {
-      setButton1MarginRight(button1MarginRight === "10px" ? "-10px" : "10px");
-      setButton2MarginRight("10px");
-      setButton3MarginRight("10px");
+      setButton1MarginRight(
+        button1MarginRight === normalize ? backsixe : normalize
+      );
+      setButton2MarginRight(normalize);
+      setButton3MarginRight(normalize);
 
-      renderLorem(50);
+      setLoremText(loremTexts[1]);
+
+      if (buttonNumber != 1) {
+        setButton1MarginRight(normalize);
+      }
     } else if (buttonNumber === 2) {
-      setButton2MarginRight(button2MarginRight === "10px" ? "-10px" : "10px");
-      setButton1MarginRight("10px");
-      setButton3MarginRight("10px");
+      setButton2MarginRight(
+        button2MarginRight === normalize ? backsixe : normalize
+      );
+      setButton1MarginRight(normalize);
+      setButton3MarginRight(normalize);
 
-      renderLorem(70);
+      setLoremText(loremTexts[2]);
     } else if (buttonNumber === 3) {
-      setButton3MarginRight(button3MarginRight === "10px" ? "-10px" : "10px");
-      setButton1MarginRight("10px");
-      setButton2MarginRight("10px");
+      setButton3MarginRight(
+        button3MarginRight === normalize ? backsixe : normalize
+      );
+      setButton1MarginRight(normalize);
+      setButton2MarginRight(normalize);
 
-      renderLorem(80);
+      setLoremText(loremTexts[3]);
     }
   };
 
-  useEffect(() => {
-    renderLorem(50);
-    setButton1MarginRight("-10px");
-  }, []);
-
-  const [loremText, setLoremText] = useState("");
-
-  const renderLorem = (words) => {
-    const lorem =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae magna vitae diam feugiat interdum sed eget nisl.";
-
-    const repeatedLorem = lorem.repeat(Math.ceil(words / 24));
-
-    const trimmedLorem = repeatedLorem.split(" ").slice(0, words).join(" ");
-
-    setLoremText(trimmedLorem);
-  };
-
   return (
-    <div className="space-y-4  my-16 w-[85%] zero:w-full mx-auto">
+    <div className="space-y-4  my-16 w-[85%] zero:w-full mx-auto mobile:w-full">
       <img
         src="/dots.png"
         alt=""
@@ -58,8 +61,8 @@ function FAQS() {
       <p className="text-center font-medium text-base">
         Questions that are asked by our clients
       </p>
-      <div className="flex   zero:flex-wrap zero:space-y-4  ">
-        <div className=" flex flex-col zero:flex-row    space-y-1   zero:space-x-3 zero:overflow-x-auto">
+      <div className="flex   zero:flex-wrap zero:space-y-4 mobile:flex-wrap  ">
+        <div className=" flex flex-col zero:flex-row  mobile:flex-row mobile:space-x-3 mobile:overflow-auto  space-y-1   zero:space-x-3 zero:overflow-x-auto">
           <Button
             onClick={() => handleButtonClick(1)}
             endIcon={
@@ -198,7 +201,7 @@ function FAQS() {
             How can I avail your Services
           </Button>
         </div>
-        <div className="w-full h-[265px] bg-[#E3F9E7] rounded-lg p-4">
+        <div className="w-full h-[265px] bg-[#E3F9E7] rounded-lg p-8 scrollbar">
           {loremText}
         </div>
       </div>

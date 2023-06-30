@@ -6,8 +6,8 @@ function Offer() {
       <h1 className="text-4xl font-bold ml-4 zero:text-center mobile:text-center laptop:text-center">
         What We Offer?
       </h1>{" "}
-      <div className="my-8 flex items-center space-x-4  zero:flex-wrap ">
-        <div className=" flex flex-col  border-l-[1.5px] border-black  zero:border-none border-dotted p-4  ">
+      <div className="my-8 flex items-center space-x-4  zero:flex-wrap mobile:flex-wrap ">
+        <div className=" flex flex-col  border-l-[1.5px] border-black  zero:border-none border-dotted p-4 mobile:border-none  ">
           <div className="h-[173px] w-[255px] flex justify-center items-center mx-auto">
             {" "}
             <img
@@ -35,7 +35,7 @@ function Offer() {
             </p>
           </div>
         </div>
-        <div className=" flex flex-col  border-l-[1.5px] border-black zero:border-none border-dotted p-4 ">
+        <div className=" flex flex-col  border-l-[1.5px] border-black zero:border-none border-dotted p-4 mobile:border-none ">
           <div className="h-[173px] w-[255px] flex justify-center items-center mx-auto">
             {" "}
             <img
@@ -63,7 +63,7 @@ function Offer() {
             </p>
           </div>
         </div>
-        <div className=" flex flex-col  border-l-[1.5px] border-black  zero:border-none border-dotted p-4 ">
+        <div className=" flex flex-col  border-l-[1.5px] border-black  zero:border-none border-dotted p-4 mobile:border-none ">
           <div className="h-[173px] w-[255px] flex justify-center items-center mx-auto">
             {" "}
             <img

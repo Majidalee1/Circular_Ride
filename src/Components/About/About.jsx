@@ -3,19 +3,19 @@ import { Button } from "@mui/material";
 
 function About() {
   return (
-    <div className="my-8 flex items-center justify-between flex-wrap  ">
+    <div className="my-8 flex items-center justify-between flex-wrap laptop:flex-nowrap  ">
       <div className="mx-auto">
         <img
           src="/About1.png"
           alt=""
-          className="w-[450px] zero:h-[350px]  zero:w-full mobile:w-full laptop:w-full"
+          className="w-[450px] zero:h-[350px] mobile:h-[400px]  zero:w-full mobile:w-full "
         />
       </div>
-      <div className="w-[640px] space-y-6 mobile:w-full laptop:w-full z-10   ">
-        <h1 className="text-[#204945] text-3xl font-bold zero:text-center mobile:text-center laptop:text-center">
+      <div className="w-[640px] space-y-6 mobile:w-full z-10   ">
+        <h1 className="text-[#204945] text-3xl font-bold zero:text-center mobile:text-center ">
           About Us
         </h1>
-        <p className="text-sm mobile:text-center mobile:text-base laptop:text-center laptop:text-lg zero:text-center ">
+        <p className="text-sm mobile:text-center mobile:text-base  laptop:text-lg zero:text-center ">
           Circular Ride aims to digitize transportation management by providing
           intelligent fleet management and route optimization solutions,
           empowering enterprises to enhance efficiency, reduce costs, and
@@ -26,7 +26,7 @@ function About() {
           sustainable Pakistan.
         </p>
 
-        <div className="flex zero:justify-center justify-start mobile:justify-center laptop:justify-center  ">
+        <div className="flex zero:justify-center justify-start mobile:justify-center   ">
           <Button
             variant="contained"
             className="bg-[#0BB755] text-white"

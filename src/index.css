@@ -6,6 +6,7 @@
     .list{
         @apply  p-[8px] text-[#5a5a5a] font-[400] text-[16px] hover:text-[#0BB755] hover:font-[700] hover:scale-105 hover:transition-all duration-300 ease-in-out;
     }
+   
  }
 
 
@@ -22,4 +23,15 @@
 }
 .boxshadow{
     box-shadow: 0px 5px 1px lightgreen;
+}
+.scrollbar{
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+
+    }
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
 }

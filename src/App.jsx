@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className="  ">
-        <div className="  " id="Home">
+        <div className=" w-full" id="Home">
           <Container>
             <Nav />
             <Hero />

@@ -9,9 +9,10 @@ function Nav() {
   const toggleDrawer = (isOpen) => {
     setDrawerOpen(isOpen);
   };
+
   return (
     <>
-      <div className=" flex items-center justify-between">
+      <div className=" flex items-center justify-between  ">
         <div className="">
           <img
             src="/logo.png"
@@ -19,6 +20,7 @@ function Nav() {
             className="w-[130px] h-[85px] mx-9 zero:mx-0 "
           />
         </div>
+
         <div className="flex items-center justify-between zero:hidden mobile:hidden">
           <div className="mr-16 ">
             <ul className="flex items-center justify-between">
